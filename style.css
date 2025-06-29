@@ -1,0 +1,185 @@
+/* Basic Reset & Font Imports */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light background */
+}
+
+.container {
+    width: 80%;
+    max-width: 1000px; /* Max width to prevent content from stretching too wide */
+    margin: auto;
+    overflow: hidden; /* Clear floats */
+    padding: 20px 0;
+}
+
+/* --- Hero Section (Header) --- */
+.hero-section {
+    background: #007bff; /* Primary brand color */
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.social-links a {
+    color: #fff;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #cce5ff; /* Lighter shade on hover */
+}
+
+/* --- Section Styling (About, Portfolio) --- */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+section:nth-of-type(even) { /* Alternate background for visual separation */
+    background: #e9ecef;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #007bff;
+}
+
+/* --- About Section Specifics --- */
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%; /* Makes it round */
+    object-fit: cover; /* Ensures image covers the area */
+    margin-bottom: 25px;
+    border: 5px solid #007bff; /* Border matching primary color */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.about-section p {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* --- Portfolio Section Specifics --- */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between grid items */
+    margin-top: 40px;
+}
+
+.project-item {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center; /* Align text within project items */
+}
+
+.project-item:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.project-item h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.project-item p {
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.button:hover {
+    background: #0056b3; /* Darker blue on hover */
+}
+
+.button-group {
+    display: flex; /* Makes buttons lay out horizontally */
+    justify-content: center; /* Centers the buttons within the group */
+    gap: 15px; /* Adds space between the buttons */
+    margin-top: 20px; /* Space above the button group */
+    flex-wrap: wrap; /* Allows buttons to wrap to the next line on smaller screens */
+}
+
+.button.primary {
+    background: #007bff; /* Your primary brand color */
+    color: #fff;
+    border-color: #007bff; /* Match border color */
+}
+
+.button.primary:hover {
+    background: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow on hover */
+}
+
+/* New: Secondary button style (for Code) */
+.button.secondary {
+    background: transparent; /* No background for an outline style */
+    color: #007bff; /* Text color matching primary brand color */
+    border-color: #007bff; /* Border color matching primary brand color */
+}
+
+.button.secondary:hover {
+    background: #007bff; /* Fill with primary color on hover */
+    color: #fff; /* Change text to white on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        gap: 10px; /* Adjust gap for vertical stacking */
+    }
+    .button {
+        width: 100%; /* Make buttons full width when stacked */
+    }
+}
+
+/* --- Footer --- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
